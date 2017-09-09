@@ -12,7 +12,9 @@ body.append("button")
 console.log("some quote blap blip foo bar baz");
 
 
-var svg = body.append("svg");
+var svg = body.append("svg")
+    .attr("width",1000)
+    .attr("height",1000);
 
 var circle = svg.append("circle")
     .attr("cx",20)
@@ -30,9 +32,9 @@ var rec = svg.append("rect")
     .style("opacity",1);
 
 function btn1_clicked(){
-    body.style("background",function banana(){ 
-        return clicked ? "white" : "red";
-    });
+    // body.style("background",function banana(){ 
+    //     return clicked ? "white" : "red";
+    // });
     
     circle.style("opacity",function switcher(){
         return clicked ? 1 : 0;
