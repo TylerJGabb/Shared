@@ -1,4 +1,25 @@
 var clicked = false;
+var people = {
+    // Id : Dob, Name
+    1 : ["01/26/1992","Tyler Gabb"],
+    2 : ["07/26/1996","Max VonHippel"]
+};
+
+
+body.selectAll(".rectangle")
+    .data(people)
+    .enter()
+        .append("circle")
+            .attr("cx",function xfun(elem){
+                return elem.key*100;
+            })
+            .attr("cy",function yfun(elem){
+                return elem.key*100;
+            })
+            .attr("r",function radfnc(elem){
+                return elem[1] == "Tyler Gabb" ? 80 : 100;
+            })
+            .style("fill","darkslategrey");
 
 var body = d3.select("body");
 
