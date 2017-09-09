@@ -10,17 +10,33 @@ body.append("button")
     .html("Button 1");
 
 console.log("some quote blap blip foo bar baz");
-function btn1_clicked(){
-    
-    body.style("background",function banana(){ 
-            return clicked ? "white" : "red";
-        })
-        .append("svg")
-        .append("circle")
-            .attr("cx",20)
-            .attr("cy",20)
-            .attr("r",50)
-            .style("fill","darkblue");
 
+
+var svg = body.append("svg");
+var circle = svg.append("circle")
+        .attr("cx",20)
+        .attr("cy",20)
+        .attr("r",50)
+        .style("fill","darkblue")
+        .style("opacity",0);
+var rec = svg.append("rectangle")
+    .attr("x",20)
+    .attr("y",20)
+    .attr("width",100)
+    .attr("height",100)
+    .style("fill","orange")
+    .stype("opacity",1);
+
+function btn1_clicked(){
+    body.style("background",function banana(){ 
+            return clicked ? "white" : "red";});
+    
+    circle.style("opacity",function switcher(){
+        return clicked ? 1 : 0;
+    });
+
+    rec.style("opacity",function switcher(){
+        return clicked ? 0 : 1;
+    });
     clicked = !clicked;
 }
