@@ -1,10 +1,33 @@
 var clicked = false;
 
+// var people = {
+//     // Id : Dob, Name
+//     1 : ["01/26/1992","Tyler Gabb"],
+//     2 : ["07/26/1996","Max VonHippel"]
+// };
+
+
+// body.selectAll(".rectangle")
+//     .data(people)
+//     .enter()
+//         .append("circle")
+//             .attr("cx",function xfun(elem){
+//                 return elem.key*100;
+//             })
+//             .attr("cy",function yfun(elem){
+//                 return elem.key*100;
+//             })
+//             .attr("r",function radfnc(elem){
+//                 return elem[1] == "Tyler Gabb" ? 80 : 100;
+//             })
+//             .style("fill","darkslategrey");
+
 var body = d3.select("body");
+
 body.append("h1")
     .html("This is the header. It was made with d3.js");
 
-body.append("button")
+body.append("button:first-child")
     .attr("id","btn1")
     .attr("onclick","btn1_clicked()")
     .html("Button 1");
