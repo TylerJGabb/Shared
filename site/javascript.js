@@ -13,23 +13,26 @@ console.log("some quote blap blip foo bar baz");
 
 
 var svg = body.append("svg");
+
 var circle = svg.append("circle")
-        .attr("cx",20)
-        .attr("cy",20)
-        .attr("r",50)
-        .style("fill","darkblue")
-        .style("opacity",0);
+    .attr("cx",20)
+    .attr("cy",20)
+    .attr("r",50)
+    .style("fill","darkblue")
+    .style("opacity",0);
+
 var rec = svg.append("rectangle")
     .attr("x",20)
     .attr("y",20)
     .attr("width",100)
     .attr("height",100)
     .style("fill","orange")
-    .stype("opacity",1);
+    .style("opacity",1);
 
 function btn1_clicked(){
     body.style("background",function banana(){ 
-            return clicked ? "white" : "red";});
+        return clicked ? "white" : "red";
+    });
     
     circle.style("opacity",function switcher(){
         return clicked ? 1 : 0;
@@ -38,5 +41,6 @@ function btn1_clicked(){
     rec.style("opacity",function switcher(){
         return clicked ? 0 : 1;
     });
+    
     clicked = !clicked;
 }
