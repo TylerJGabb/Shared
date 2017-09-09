@@ -1,10 +1,11 @@
 var clicked = false;
 
 var body = d3.select("body");
+
 body.append("h1")
     .html("This is the header. It was made with d3.js");
 
-body.append("button")
+body.append("button:first-child")
     .attr("id","btn1")
     .attr("onclick","btn1_clicked()")
     .html("Button 1");
