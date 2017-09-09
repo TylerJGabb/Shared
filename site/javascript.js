@@ -21,7 +21,7 @@ var circle = svg.append("circle")
     .style("fill","darkblue")
     .style("opacity",0);
 
-var rec = svg.append("rectangle")
+var rec = svg.append("rect")
     .attr("x",20)
     .attr("y",20)
     .attr("width",100)
@@ -41,6 +41,6 @@ function btn1_clicked(){
     rec.style("opacity",function switcher(){
         return clicked ? 0 : 1;
     });
-    
+
     clicked = !clicked;
 }
