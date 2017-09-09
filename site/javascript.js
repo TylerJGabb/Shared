@@ -36,8 +36,8 @@ console.log("some quote blap blip foo bar baz");
 
 
 var svg = body.append("svg")
-    .attr("width",1000)
-    .attr("height",1000);
+    .attr("width",250)
+    .attr("height",250);
 
 var circle = svg.append("circle")
     .attr("cx",20)
