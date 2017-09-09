@@ -32,6 +32,7 @@ var rec = svg.append("rect")
     .style("opacity",1);
 
 function btn1_clicked(){
+    clicked = !clicked;
     // body.style("background",function banana(){ 
     //     return clicked ? "white" : "red";
     // });
@@ -44,5 +45,5 @@ function btn1_clicked(){
         return clicked ? 0 : 1;
     });
 
-    clicked = !clicked;
+    
 }
